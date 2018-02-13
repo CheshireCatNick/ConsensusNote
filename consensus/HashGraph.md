@@ -25,6 +25,8 @@ HashGraph
 6. witness event: the first event in each round.
 7. received round: x has received round r if that is the first round in which all the **unique famous witness event** were descendants of it, and the fame of every witness is decided less than or equal to r.
 8. received time: if x received round = r and Alice create a unique famous witness y in r, and z be the earliest self-ancestor of y that learned x, and t is the time stamp Alice put in z, then t is the time when Alice first learned x. The received time is median of all time stamp.
+9. coin round: assume there's an attacker that can control the message over the Internet, trying to keep the vote evenly split. A coin round is a round that anyone can vote randomly. This design will prevent such attack, since there's a chance that the community pass 2/3 * n threshold. Thus, we cliam that this system will reach consensus finally with probability 1.
+
 ### Algorithm
 ``` python
 thread 1:
