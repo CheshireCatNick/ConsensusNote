@@ -1,5 +1,6 @@
 Consensus Bound
 ==
+### Comparison
 |Consensus|Proof|Bound|
 |-|-|-|
 |IOTA|proof by probability, when attack = 1 total = 3, p(successfully attack) is low|2/3 online honest|
@@ -8,6 +9,10 @@ Consensus Bound
 |PBFT|based on Async|assume 2/3 honest to proof consensus algorithm is safe|
 |Hashgraph|based on Async|assume 2/3 honest to proof consensus algorithm if safe|
 
+### Proof
 Simple proof: if 1 in 3 people is malicious, he can modify the message, and the other two has no way to reach consensus.
 General proof: if f in n nodes are faulty:
 When we see f nodes die out, it is possible that there are all faulty nodes, or none of them are faulty nodes, we can't tell. Consider the second case, n - f > 2f => n > 3f
+
+### Concept
+1. To reach consensus, we not only need to know 2/3 of people know the message, but also know that 2/3 of people know 2/3 of people know the message.
