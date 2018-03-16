@@ -16,3 +16,10 @@ When we see f nodes die out, it is possible that there are all faulty nodes, or 
 
 ### Concept
 1. To reach consensus, we not only need to know 2/3 of people know the message, but also know that 2/3 of people know 2/3 of people know the message.
+
+### Byzantine Fault Tolerance v.s. Byzantine Agreement
+- Fault tolerance means some nodes can be fail-stop or malicious, but good nodes will always vote the same. 3 rounds finalize.
+- Agreement means good nodes may not have the same result, and they need agreement by voting (harder to decide). Many 3 rounds converge to finalize.
+
+### Reference
+[Byzantine Problem simple intro](https://yeasy.gitbooks.io/blockchain_guide/content/distribute_system/bft.html)
